@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+html {
+    font-size: 65%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    position: relative;
+    height: 90vh;
+    background-image: linear-gradient(to top right,#c7202bb8,#360609b8), url('../images/wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
+
+    &__logo-box {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+    }
+    &__logo {
+        width: 25rem;
+    }
+    &__center {
+        color: white;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__primary {
+        display: block;
+        font-size: 5rem;
+        animation: slideFromLeft .7s ease-out;
+    }
+    &__secondary {
+        display: block;
+        font-size: 2rem;
+        animation: slideFromRight .7s ease-out;
+    }
+    &__btn {
+        margin: 2rem 0;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        border-radius: 2rem;
+        outline: none;
+        border: none;
+        background: #360609;
+        color: white;
+        transition: all .4s;
+        animation: fadeIn .7s ease-in;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        &:active {
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            font-size: 1.95rem;
+        }
+    }
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(20px);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight { 
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-20px)
+    } 
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media(max-width: 850px) {
+    html {
+        font-size: 50%;
+    }
+}
