@@ -41,11 +41,14 @@ body {
     &__primary {
         display: block;
         font-size: 5rem;
+        letter-spacing: .5rem;
+        backface-visibility: hidden;
         animation: slideFromLeft .7s ease-out;
     }
     &__secondary {
         display: block;
         font-size: 2rem;
+        backface-visibility: hidden;
         animation: slideFromRight .7s ease-out;
     }
     &__btn {
@@ -58,6 +61,7 @@ body {
         background: #360609;
         color: white;
         transition: all .4s;
+        backface-visibility: hidden;
         animation: fadeIn .7s ease-in;
 
         &:hover {
@@ -85,10 +89,10 @@ body {
 @keyframes slideFromLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     80% {
-        transform: translateX(20px);
+        transform: translateX(2rem);
     } 
     100% {
         opacity: 1;
@@ -99,10 +103,10 @@ body {
 @keyframes slideFromRight { 
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     80% {
-        transform: translateX(-20px)
+        transform: translateX(-2rem)
     } 
     100% {
         opacity: 1;
