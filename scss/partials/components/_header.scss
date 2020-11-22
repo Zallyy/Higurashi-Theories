@@ -1,23 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
-
-html {
-    font-size: 65%;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
 .header {
     position: relative;
     height: 90vh;
-    background-image: linear-gradient(to top right,#c7202bb8,#360609b8), url('../images/wallpaper.jpg');
+    background-image: linear-gradient(to top right,rgba($color-primary, 0.8),rgba($color-primary-dark, 0.8)), url('../images/wallpaper.jpg');
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
@@ -43,13 +27,13 @@ body {
         font-size: 5rem;
         letter-spacing: .5rem;
         backface-visibility: hidden;
-        animation: slideFromLeft .7s ease-out;
+        animation: slideFromLeft 1.4s ease-out;
     }
     &__secondary {
         display: block;
         font-size: 2rem;
         backface-visibility: hidden;
-        animation: slideFromRight .7s ease-out;
+        animation: slideFromRight 1.4s ease-out;
     }
     &__btn {
         margin: 2rem 0;
@@ -58,11 +42,11 @@ body {
         border-radius: 2rem;
         outline: none;
         border: none;
-        background: #360609;
+        background: $color-red-brown;
         color: white;
         transition: all .4s;
         backface-visibility: hidden;
-        animation: fadeIn .7s ease-in;
+        animation: fadeIn 1.4s ease-in;
 
         &:hover {
             cursor: pointer;
@@ -73,49 +57,5 @@ body {
             box-shadow: 0 5px 10px rgba(0,0,0,0.2);
             font-size: 1.95rem;
         }
-    }
-
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-@keyframes slideFromLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-    80% {
-        transform: translateX(2rem);
-    } 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideFromRight { 
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
-    80% {
-        transform: translateX(-2rem)
-    } 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@media(max-width: 850px) {
-    html {
-        font-size: 50%;
     }
 }
